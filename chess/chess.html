@@ -1,9 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Chess AI</title>
+  <title>Chess</title>
 
-  <!-- Chessboard CSS -->
   <link rel="stylesheet"
   href="https://cdnjs.cloudflare.com/ajax/libs/chessboard-js/1.0.0/chessboard-1.0.0.min.css">
 
@@ -14,73 +13,23 @@
       color: white;
       font-family: Arial;
     }
-
-    #board {
-      width: 400px;
-      margin: 20px auto;
-    }
-
-    button {
-      padding: 10px 20px;
-      background: cyan;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-    }
   </style>
 </head>
 
 <body>
 
-<h1>♟️ Chess Game</h1>
-
-<h2 id="status">Choose Difficulty</h2>
-
-<h3 id="scoreboard">
-  You: 0 | AI: 0 | Draws: 0
-</h3>
-
-<div id="board"></div>
-
-<button onclick="restartGame()">Restart</button>
-
-<!-- ✅ LOAD IN THIS ORDER -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/chess.js/0.10.3/chess.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/chessboard-js/1.0.0/chessboard-1.0.0.min.js"></script>
-
-<script src="chess.js"></script>
-
-</body>
-</html><!DOCTYPE html>
-<html>
-<head>
-  <title>Chess AI</title>
-
-  <link rel="stylesheet"
-  href="https://cdnjs.cloudflare.com/ajax/libs/chessboard-js/1.0.0/chessboard-1.0.0.min.css">
-
-  <link rel="stylesheet" href="chess.css">
-</head>
-
-<body>
-
-<h1>♟️ Chess Game</h1>
-
-<button onclick="goBack()">⬅ Back</button>
-
-<h3 id="difficultyLabel"></h3>
-
-<h3 id="scoreboard">You: 0 | AI: 0 | Draws: 0</h3>
+<h1>Chess Game</h1>
 
 <div id="board" style="width: 400px; margin: auto;"></div>
 
 <button onclick="restartGame()">Restart</button>
 
-<audio id="moveSound" src="../assets/move.mp3"></audio>
-
+<!-- ✅ IMPORTANT ORDER -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<!-- ✅ USE THIS VERSION -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/chess.js/0.10.3/chess.min.js"></script>
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/chessboard-js/1.0.0/chessboard-1.0.0.min.js"></script>
 
 <script src="chess.js"></script>
