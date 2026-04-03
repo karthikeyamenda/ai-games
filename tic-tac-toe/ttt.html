@@ -3,6 +3,8 @@
 <head>
   <title>Tic Tac Toe AI</title>
   <link rel="stylesheet" href="ttt.css">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
 
@@ -16,11 +18,14 @@
   You (X): 0 | AI (O): 0 | Draws: 0
 </h2>
 
+<!-- 🏆 Leaderboard -->
+<h3>🏆 Leaderboard</h3>
+<ul id="leaderboard"></ul>
+
 <div id="board"></div>
 
 <button onclick="restartGame()">Restart</button>
 
-<!-- 🔊 Sounds -->
 <audio id="clickSound" src="../assets/click.mp3"></audio>
 <audio id="winSound" src="../assets/win.mp3"></audio>
 

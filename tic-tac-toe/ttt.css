@@ -7,15 +7,15 @@ body {
 
 #board {
     display: grid;
-    grid-template-columns: repeat(3, 100px);
+    grid-template-columns: repeat(3, 90px);
     gap: 10px;
     justify-content: center;
-    margin-top: 30px;
+    margin-top: 20px;
 }
 
 .cell {
-    width: 100px;
-    height: 100px;
+    width: 90px;
+    height: 90px;
     background: #1e293b;
     display: flex;
     align-items: center;
@@ -25,17 +25,23 @@ body {
     border-radius: 10px;
 }
 
-.cell:hover {
-    background: #334155;
+button {
+    margin: 10px;
+    padding: 10px 20px;
+    background: cyan;
+    border: none;
+    border-radius: 8px;
 }
 
-button {
-    margin-top: 20px;
-    padding: 10px 20px;
-    border: none;
-    background: cyan;
-    color: black;
-    font-weight: bold;
-    cursor: pointer;
-    border-radius: 8px;
+/* 📱 MOBILE */
+@media (max-width: 600px) {
+    #board {
+        grid-template-columns: repeat(3, 70px);
+    }
+
+    .cell {
+        width: 70px;
+        height: 70px;
+        font-size: 1.5rem;
+    }
 }

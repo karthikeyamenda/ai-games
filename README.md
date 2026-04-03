@@ -1,78 +1,84 @@
 # AI Games Hub
 
-A simple web-based platform where users can play classic games like Tic Tac Toe and Chess against an AI opponent.
+This project is a browser-based gaming platform that includes two classic games: Tic Tac Toe and Chess. Both games are designed with an interactive user interface and basic artificial intelligence to allow single-player gameplay.
 
-This project focuses on combining game logic, basic AI, and an interactive user interface into one clean web application.
-
----
+The application is built using HTML, CSS, and JavaScript, and is fully functional without any external frameworks. It is deployed online and can be accessed directly through a web browser on both desktop and mobile devices.
 
 ## Features
 
-- Welcome page with game selection
-- Playable Tic Tac Toe with AI (Minimax algorithm)
-- Playable Chess with AI moves
-- Clean and simple UI
-- Fully browser-based (no installation needed)
-
----
-
-## Tech Stack
-
-- HTML
-- CSS
-- JavaScript
-- chess.js (for chess logic)
-- chessboard.js (for chess UI)
-
----
+* Game selection interface with a welcome page
+* Tic Tac Toe with AI opponent and multiple difficulty levels (Easy, Medium, Hard)
+* Chess game with interactive board and basic AI logic
+* Score tracking for both games
+* Sound effects for user interaction
+* Responsive design for mobile and desktop usage
+* Navigation between pages with a clean user experience
 
 ## Project Structure
+
+```
 ai-games/
 │
 ├── index.html
-├── style.css
-├── script.js
+├── assets/
+│   ├── click.mp3
+│   ├── win.mp3
+│   └── move.mp3
 │
 ├── tic-tac-toe/
-│ ├── ttt.html
-│ ├── ttt.css
-│ ├── ttt.js
+│   ├── start.html
+│   ├── ttt.html
+│   ├── ttt.css
+│   └── ttt.js
 │
-├── chess/
-│ ├── chess.html
-│ ├── chess.css
-│ ├── chess.js
-│
-└── assets/
+└── chess/
+    ├── start.html
+    ├── chess.html
+    ├── chess.css
+    └── chess.js
+```
 
+## How to Run Locally
 
----
+1. Clone the repository:
 
-##How to Run
+   ```
+   git clone https://github.com/your-username/ai-games.git
+   ```
 
-1. Download or clone the repository  
-2. Open the folder in VS Code  
-3. Open `index.html` in your browser  
+2. Open the project folder:
 
----
+   ```
+   cd ai-games
+   ```
 
-## Deployment
+3. Run the project:
 
-This project can be deployed using platforms like Vercel or GitHub Pages.
+   * Open `index.html` directly in a browser
+   * Or use a local server (recommended, e.g., Live Server in VS Code)
 
----
+## Live Demo
+
+The project is deployed and accessible at:
+
+https://karthikeyamenda.github.io/ai-games/
+
+## Technologies Used
+
+* HTML5
+* CSS3
+* JavaScript (Vanilla JS)
+* LocalStorage for score persistence
 
 ## Future Improvements
 
-- Add difficulty levels for AI
-- Improve UI/UX with animations
-- Add multiplayer support
-- Add sound effects and game history
-
----
+* Online multiplayer support
+* Improved AI for Chess
+* Enhanced UI with animations
+* Global leaderboard system
 
 ## Author
 
 Karthikeya
 
----
+This project was developed as part of learning web development, focusing on game logic, UI design, and deployment.
