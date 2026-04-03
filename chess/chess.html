@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Chess</title>
+  <title>Chess Game</title>
 
   <link rel="stylesheet"
   href="https://cdnjs.cloudflare.com/ajax/libs/chessboard-js/1.0.0/chessboard-1.0.0.min.css">
@@ -13,6 +13,20 @@
       color: white;
       font-family: Arial;
     }
+
+    #board {
+      width: 400px;
+      margin: 20px auto;
+    }
+
+    button {
+      padding: 10px 20px;
+      margin-top: 20px;
+      background: #38bdf8;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
   </style>
 </head>
 
@@ -20,14 +34,13 @@
 
 <h1>Chess Game</h1>
 
-<div id="board" style="width: 400px; margin: auto;"></div>
+<div id="board"></div>
 
 <button onclick="restartGame()">Restart</button>
 
-<!-- ✅ IMPORTANT ORDER -->
+<!-- ✅ CORRECT SCRIPT ORDER -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
-<!-- ✅ USE THIS VERSION -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/chess.js/0.10.3/chess.min.js"></script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/chessboard-js/1.0.0/chessboard-1.0.0.min.js"></script>

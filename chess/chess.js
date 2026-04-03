@@ -1,8 +1,9 @@
 let board;
 let game = new Chess();
 
-// 🚫 Prevent dragging black pieces
+// 🚫 Prevent moving black pieces
 function onDragStart(source, piece) {
+    if (game.game_over()) return false;
     if (piece.search(/^b/) !== -1) return false;
 }
 
@@ -15,8 +16,16 @@ function onDrop(source, target) {
         promotion: 'q'
     });
 
+    // ❌ illegal move
     if (move === null) return 'snapback';
 
+    // ✅ check game end after player move
+    if (game.game_over()) {
+        showResult();
+        return;
+    }
+
+    // 🤖 AI move
     setTimeout(makeAIMove, 300);
 }
 
@@ -31,7 +40,7 @@ function makeAIMove() {
     let moves = game.moves();
 
     if (moves.length === 0) {
-        alert("Game Over");
+        showResult();
         return;
     }
 
@@ -39,6 +48,24 @@ function makeAIMove() {
 
     game.move(move);
     board.position(game.fen());
+
+    if (game.game_over()) {
+        showResult();
+    }
+}
+
+// 🏆 Show result
+function showResult() {
+
+    if (game.in_checkmate()) {
+        alert("Checkmate!");
+    } 
+    else if (game.in_stalemate()) {
+        alert("Stalemate!");
+    } 
+    else if (game.in_draw()) {
+        alert("Draw!");
+    }
 }
 
 // 🔁 Restart
@@ -47,7 +74,7 @@ function restartGame() {
     board.start();
 }
 
-// 🚀 Init
+// 🚀 Initialize board
 board = Chessboard('board', {
     draggable: true,
     position: 'start',
