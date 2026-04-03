@@ -1,0 +1,24 @@
+body {
+    text-align: center;
+    background: #0f172a;
+    color: white;
+    font-family: Arial;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    border: none;
+    background: cyan;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 8px;
+}
+.square-highlight {
+    background-color: rgba(0, 255, 0, 0.4) !important;
+}

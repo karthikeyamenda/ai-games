@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Chess Difficulty</title>
+</head>
+<body style="text-align:center; background:#0f172a; color:white;">
+
+<h1>♟️ Chess</h1>
+<h2>Select Difficulty</h2>
+
+<button onclick="startGame('easy')">Easy</button>
+<button onclick="startGame('medium')">Medium</button>
+<button onclick="startGame('hard')">Hard</button>
+
+<script>
+function startGame(level) {
+    localStorage.setItem("chessDifficulty", level);
+    window.location.href = "chess.html";
+}
+</script>
+
+</body>
+</html>

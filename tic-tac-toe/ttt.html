@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Tic Tac Toe AI</title>
+  <link rel="stylesheet" href="ttt.css">
+</head>
+<body>
+
+<h1>❌⭕ Tic Tac Toe</h1>
+
+<button onclick="goBack()">⬅ Back</button>
+
+<h3 id="difficultyLabel"></h3>
+
+<h2 id="scoreboard">
+  You (X): 0 | AI (O): 0 | Draws: 0
+</h2>
+
+<div id="board"></div>
+
+<button onclick="restartGame()">Restart</button>
+
+<!-- 🔊 Sounds -->
+<audio id="clickSound" src="../assets/click.mp3"></audio>
+<audio id="winSound" src="../assets/win.mp3"></audio>
+
+<script src="ttt.js"></script>
+</body>
+</html>

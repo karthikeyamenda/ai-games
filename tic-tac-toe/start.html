@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Select Difficulty</title>
+  <style>
+    body {
+      text-align: center;
+      background: #0f172a;
+      color: white;
+      font-family: Arial;
+    }
+
+    button {
+      display: block;
+      margin: 15px auto;
+      padding: 12px 25px;
+      font-size: 16px;
+      background: cyan;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+
+<h1>❌⭕ Tic Tac Toe</h1>
+<h2>Select Difficulty</h2>
+
+<button onclick="startGame('easy')">Easy</button>
+<button onclick="startGame('medium')">Medium</button>
+<button onclick="startGame('hard')">Hard</button>
+
+<script>
+function startGame(level) {
+    localStorage.setItem("tttDifficulty", level);
+    window.location.href = "ttt.html";
+}
+</script>
+
+</body>
+</html>
